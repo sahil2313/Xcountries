@@ -1,23 +1,26 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({url , title , altName}) => {
   return (
     <div style={{
         height :"200px",
         width : "200px",
         border : "black solid 1px",
+        borderRadius : "5px",
+        margin : "10px",
         display : "flex",
         flexDirection : "column",
         gap : "10px",
         justifyContent : "center",
         alignItems : "center",
-        textAlign : "center"
+        textAlign : "center",
+
     }}>
-      <img src={"india.img"} alt={"india"} style={{
+      <img src={url} alt={altName} style={{
         width : "100px",
         height : "100px"
       }} />
-      <h4>India</h4>
+      <h4>{title}</h4>
     </div>
   )
 }
