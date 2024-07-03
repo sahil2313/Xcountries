@@ -11,7 +11,7 @@ const Countries = () => {
 
     fetch(api_url).then(res => {
       res.json().then(data => setData(data))
-    }).catch(err => console.error(err.message))
+    }).catch(err => console.error(`Error fetching data: ${err.message}`))
   
   },[])
 
